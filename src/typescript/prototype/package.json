@@ -1,0 +1,13 @@
+{
+  "name": "prototype",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node_modules/.bin/ts-node src/main.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^8.4.1",
+    "typescript": "^3.7.2"
+  }
+}
