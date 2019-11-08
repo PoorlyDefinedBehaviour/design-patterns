@@ -1,0 +1,13 @@
+{
+  "name": "observer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node_modules/.bin/ts-node main"
+  },
+  "devDependencies": {
+    "ts-node": "^8.4.1",
+    "typescript": "^3.7.2"
+  }
+}

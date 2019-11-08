@@ -1,0 +1,8 @@
+{
+  "name": "design-patterns",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/PoorlyDefinedBehaviour/design-patterns.git",
+  "author": "PoorlyDefinedBehaviour <brunotj2015@hotmail.com>",
+  "license": "MIT"
+}
