@@ -13,8 +13,7 @@ class SlackNotification implements Notification {
   }
 
   public function send(string $title, string $message): void {
-    $slack_message = "#" . $title . "# " . strip_tags($message);
     $this->slack->login();
-    $this->slack->send_message($this->slack_chat_id, $slack_message);
+    $this->slack->send_message($this->slack_chat_id, $title, \strip_tags($message));
   }
 }

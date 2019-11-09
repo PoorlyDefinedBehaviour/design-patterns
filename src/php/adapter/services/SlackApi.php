@@ -14,8 +14,8 @@ class SlackApi {
     return $this;
   }
 
-  public function send_message(string $chat_id, string $message): SlackApi {
-    echo "Posted following message into the '$chat_id' chat: '$message'.\n";
+  public function send_message(string $chat_id, string $title, string $message): SlackApi {
+    echo "Posted following message into the '$chat_id' with title $title in chat: '$message'.\n";
     return $this;
   }
 }

@@ -15,5 +15,6 @@ function main(): void {
 
   $slack_notification = new SlackNotification(new SlackApi("login", "api-key"), "chat_id-123");
   send_message($slack_notification);
+
 }
 main();
