@@ -55,14 +55,17 @@ class Server {
   public process(request: IRequest): void {
     const response = {};
 
-    if (!this.head_middleware) {
-      this.route_handlers.get(request.path)!(request, response);
+    const handler = this.route_handlers.get(request.path);
+    if (!handler) {
       return;
     }
 
-    const handler = this.route_handlers.get(request.path);
+    if (!this.head_middleware) {
+      handler(request, response);
+      return;
+    }
 
-    if (handler && this.head_middleware.process(request, response)) {
+    if (this.head_middleware.process(request, response)) {
       handler(request, response);
     }
   }
