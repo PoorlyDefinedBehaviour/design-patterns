@@ -10,10 +10,7 @@ export default class Rectangle extends Shape {
   public get_area = (): number => this.width * this.height;
 
   public static rectangle_from(rectangle: Rectangle): Rectangle {
-    const rect = Object.create(this);
-    rect.width = rectangle.width;
-    rect.height = rectangle.height;
-    return rect;
+    return new Rectangle(rectangle.get_width(), rectangle.get_height());
   }
 
   public clone = (): Shape => Rectangle.rectangle_from(this);
