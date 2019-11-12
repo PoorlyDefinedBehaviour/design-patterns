@@ -4,7 +4,7 @@ interface Observer {
   done?: () => void;
 }
 
-class Observable<T> {
+class Observable {
   constructor(private handler: (observer: Observer) => void) {}
 
   public subscribe = (observer: Function | Observer) => {
