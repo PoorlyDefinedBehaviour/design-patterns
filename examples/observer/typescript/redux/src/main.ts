@@ -89,10 +89,13 @@ function middleware(_: string, event: DispatchEvent<string>): void {
 
 function main(): void {
   const store = Redux.create_store<string>("", [reducer]);
+
   store.apply_middleware(middleware);
 
-  store.dispatch({ type: "SET_PHRASE", data: "hello world!" });
+  store.subscribe({
+    notify: (state: string) => console.log(`New store state => ${state}`)
+  });
 
-  console.log(`store.get_state() => ${store.get_state()}`);
+  store.dispatch({ type: "SET_PHRASE", data: "hello world!" });
 }
 main();
