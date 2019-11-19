@@ -41,7 +41,7 @@ class Observable {
       })
     );
 
-  private pluckDeep = <T>(obj: T, path: string) =>
+  private pluck_deep = <T>(obj: T, path: string) =>
     path
       .split(".")
       .reduce(
@@ -52,7 +52,7 @@ class Observable {
   public pluck = <T>(path: string) =>
     new Observable((observer: Observer) =>
       this.subscribe({
-        next: (value: T) => observer.next(this.pluckDeep(value, path)),
+        next: (value: T) => observer.next(this.pluck_deep(value, path)),
         error: (e: Error) => observer.error!(e),
         done: () => observer.done!()
       })

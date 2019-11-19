@@ -105,3 +105,9 @@ public/
 
 # DynamoDB Local files
 .dynamodb/
+
+*.class
+
+bin
+makefile
+chat

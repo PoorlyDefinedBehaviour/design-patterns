@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build C++ project",
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "command": "make"
+    },
+    {
+      "label": "Build & run C++ project",
+      "type": "shell",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": "$gcc",
+      "command": "g++-9 -ggdb -std=c++2a -Wall -Wextra -Wpedantic examples/observer/cpp/src/*.cpp -o bin/main && bin/main"
+    }
+  ]
+}
