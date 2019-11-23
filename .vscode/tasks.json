@@ -18,7 +18,7 @@
         "isDefault": true
       },
       "problemMatcher": "$gcc",
-      "command": "g++-9 -ggdb -std=c++2a -Wall -Wextra -Wpedantic examples/observer/cpp/src/*.cpp -o bin/main && bin/main"
+      "command": "g++-9 -ggdb -std=c++2a -Wall -Wextra -Wpedantic examples/observer/cpp/redux/src/*.cpp -o bin/main && bin/main"
     }
   ]
 }
